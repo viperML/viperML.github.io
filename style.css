@@ -10,7 +10,7 @@
 
 body {
 	background-color: var(--background);
-	background-image: url("background.webp");
+	background-image: url("img/background.webp");
 	background-size: cover;
 }
 
@@ -35,8 +35,9 @@ body {
 
 #frame_image {
 	width: 250px;
-	height: 305px;
+	height: 295px;
 	float: left;
+	position: relative;
 
 	background-size: cover;
 	border-radius: 15px;
@@ -116,6 +117,7 @@ li {
 
 
 .button {
+	opacity: 0.4;
 	width: 15px;
 	height: 15px;
 	background-color: var(--white1);
@@ -131,14 +133,14 @@ li {
 	/* Default color when page is opened */
 	background-color: var(--gray1);
 	position: absolute;
-	bottom: 20px;
-	left: 20px;
+	bottom: 15px;
+	left: 15px;
 }
 
 #B2 {
 	position: absolute;
-	bottom: 20px;
-	left: 47px;
+	bottom: 15px;
+	left: 40px;
 }
 
 #footer {
