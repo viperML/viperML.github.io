@@ -18,19 +18,19 @@ body {
 	display: inline-block;
 	
 	/* Center position hack (CSS sucks)*/
-	width: 1120px;
+	width: 1130px;
 	height: 308px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -560px;
+	margin-left: -565px;
 	margin-top: -154px;
 }
 
 #frame0{
 	text-align: left;
 	float: left;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 #frame_image {
