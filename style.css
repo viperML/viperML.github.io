@@ -4,6 +4,7 @@
 	--gray1: rgb(161, 158, 158);
 	--gray2: rgb(26, 26, 26);
 	--gray3: rgb(70, 68, 68);
+	--gray3_alpha: rgba(185, 185, 185, 0.13);
 	--background: #000000;
 }
 
@@ -35,17 +36,10 @@ body {
 #frame_image {
 	width: 250px;
 	height: 305px;
-	/* position: absolute;
-	left: 460px;
-	top: 325px; */
-	background-size: cover;
-	border-radius: 10px;
-	border-style: solid;
-	border-width: 7px;
-	box-sizing: border-box;
-	border-color: var(--gray3);
-
 	float: left;
+
+	background-size: cover;
+	border-radius: 15px;
 }
 
 .frame1 {
@@ -125,8 +119,6 @@ li {
 	width: 15px;
 	height: 15px;
 	background-color: var(--white1);
-	/*position: absolute;
-	bottom: 7.5; */ 
 	border-radius: 3px;
 }
 
