@@ -136,7 +136,17 @@ li {
 }
 
 #B1 {
+	/* Default color when page is opened */
 	background-color: var(--gray1);
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+#B2 {
+	position: absolute;
+	bottom: 20px;
+	left: 47px;
 }
 
 #footer {
