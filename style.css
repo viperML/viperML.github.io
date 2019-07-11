@@ -4,19 +4,58 @@
 	--gray1: rgb(161, 158, 158);
 	--gray2: rgb(26, 26, 26);
 	--gray3: rgb(70, 68, 68);
-	--background: #121212;
+	--background: #000000;
 }
 
 body {
 	background-color: var(--background);
 	background-image: url("background.webp");
+	background-size: cover;
 }
 
 #frame {
+	display: inline-block;
+	
+	/* Center position hack (CSS sucks)*/
+	width: 1120px;
+	height: 308px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -560px;
+	margin-top: -154px;
+}
+
+#frame0{
+	text-align: left;
+	float: left;
+	margin-left: 10px;
+}
+
+#frame_image {
+	width: 250px;
+	height: 305px;
+	/* position: absolute;
+	left: 460px;
+	top: 325px; */
+	background-size: cover;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 7px;
+	box-sizing: border-box;
+	border-color: var(--gray3);
+
+	float: left;
+}
+
+.frame1 {
 	width: 860px;
 	text-align: left;
-	margin-top: 330px;
-	margin-left: 740px;
+}
+
+.frame1b {
+	/* Hidden when page is opened */
+	display: none;
 }
 
 #Title {
@@ -45,16 +84,8 @@ body {
 	margin-left: 5px;
 }
 
-#frame_blocks {
-	text-align: center;
-}
 
-#frame_alt {
-
-	display: none;
-}
-
-#linkblock {
+.linkblock {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	width: 120px;
@@ -70,7 +101,7 @@ body {
 	vertical-align: top;
 }
 
-#blocktitle {
+.blocktitle {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	color: var(--gray3);
@@ -88,32 +119,24 @@ li {
 	margin-bottom: 0px;
 }
 
-#image_frame {
-	width: 250px;
-	height: 305px;
-	position: absolute;
-	left: 460px;
-	top: 325px;
-	background-size: cover;
-	border-radius: 10px;
-	border-style: solid;
-	border-width: 7px;
-	box-sizing: border-box;
-	border-color: var(--gray3)
-}
+
 
 .button {
 	width: 15px;
 	height: 15px;
 	background-color: var(--white1);
-	position: absolute;
-	bottom: 7.5;
+	/*position: absolute;
+	bottom: 7.5; */ 
 	border-radius: 3px;
 }
 
 .button:hover {
 	background-color: var(--gray3) !important;
 	cursor: pointer;
+}
+
+#B1 {
+	background-color: var(--gray1);
 }
 
 #footer {

@@ -6,10 +6,10 @@
 	
 	<script type="text/javascript">
 		function show( show1 ) {
-		  document.getElementById(show1).style.display="block";
+		  document.getElementsByClassName(show1)[0].style.display="block";
 		}
 		function hide( hide1 ) {
-		  document.getElementById(hide1).style.display="none";
+		  document.getElementsByClassName(hide1)[0].style.display="none";
 		}
 		function togON( tog ) {
 		  document.getElementById(tog).style.backgroundColor="var(--gray1)";
@@ -25,141 +25,128 @@
 </head>
 
 <body>
-
-<!-- Random picture chooser -->
-<script>
-	var pictures = [
-		'1gYB72S.webp',
-		'2o8rxqi06aj01.webp',
-		'6e51a26qrl411.webp',
-		'8Lzurdr.webp',
-		'86c25774-ffd6-4ba5-ae9c-e4ae07715f48.webp',
-		'54343625_p0_master1200_waifu2x_art_noise3_scale_tta_1.webp',
-		'70917055_p0.webp',
-		'72255635_p2.webp',
-		'1537402771912.webp',
-		'1540804601098.webp',
-		'da48591e16e09addfef3df4ede9ccf21--my-heart-it-fire-emblem-awakening.webp',
-		'Dy00p9MVsAs2F5S.webp',
-		'DzKjDBiVYAA0_b4.webp',
-		'f401asmelte21.webp',
-		'flowers.webp',
-		'g5gb7Hc.webp',
-		'SmQMP7g.webp',
-		'toltjaxs9sp11.webp',
-		'v1bdcbvta7a21.webp',
-		'vWsOro9.webp',
-		'y1qnw164akuy.webp'
-	];
-	var picture = pictures[Math.floor(Math.random() * pictures.length)];
-	document.write('<div id=image_frame style="background-image: url(img/' + picture + ')">');
-</script>
-
-	<div id="B1" class=button onclick="show('frame_blocks'); hide('frame_alt'); togON('B1'); togOFF('B2');" style="left: 7.5; background-color: var(--gray1);"></div>
-	<div id="B2" class=button onclick="hide('frame_blocks'); show('frame_alt'); togON('B2'); togOFF('B1');" style="left: 30"></div>
-
-</div>
-
 <div id=frame>
 
-	<div id="Title">search the web</div>
+	<!-- Random picture chooser -->
+	<script>
+		var pictures = [
+			'1gYB72S.webp'
+		];
+		var picture = pictures[Math.floor(Math.random() * pictures.length)];
 
-	<input id="searchbox" placeholder="" type="text" autofocus="true"  autocomplete="true"></input>
+	// frame_image written to html
+	document.write('<div id=frame_image style="background-image: url(img/' + picture + ')">');
+	</script>
+		<!-- Buttons to change between frame1a and frame1b -->
+		<div id="B1" class=button onclick="show('frame1a'); hide('frame1b'); togON('B1'); togOFF('B2');"></div>
+		<div id="B2" class=button onclick="hide('frame1a'); show('frame1b'); togON('B2'); togOFF('B1');"></div>
 
-	<div id=frame_blocks>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					UTILIDADES
-				</div>
-				<li><a href="https://mega.nz/fm/IYhSFY7D">MEGA</a></li>
-				<li><a href="https://github.com/">GitHub</a></li>
-				<li><a href="https://photos.google.com/?hl=es">GFotos</a></li>
-				<li><a href="https://www.google.com/maps">GMaps</a></li>
-				<li><a href="https://calendar.google.com/calendar/r">GCalendar</a></li>
-			</ul>
-		</div>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					SOCIAL
-				</div>
-				<li><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></li>
-				<li><a href="https://web.whatsapp.com/">Whatsapp</a></li>
-				<li><a href="https://web.telegram.org/#/im">Telegram</a></li>
-				<li><a href="https://twitter.com/?lang=es">Twitter</a></li>
-				<li><a href="https://www.reddit.com/">Reddit</a></li>
-				<li><a href="https://www.twitch.tv/">Twitch</a></li>	
-			</ul>
-		</div>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					PIRATING
-				</div>
-				<li><a href="https://blackpearl.biz/">Blackpearl</a></li>
-				<li><a href="https://unblocked-pw.github.io/">Unblocked</a></li>
-				<li><a href="http://fitgirl-repacks.site/">FitGirl</a></li>
-				<li><a href="https://nyaa.si/">Nyaa</a></li>
-				<li><a href="https://www.subanima.net/viewforum.php?f=30">SubAnima</a></li>
-				<li><a href="https://forum.mobilism.org/viewforum.php?f=398">Mobilism</a></li>
-			</ul>
-		</div>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					ARTWORK
-				</div>
-				<li><a href="https://unsplash.com/">Unsplash</a></li>
-				<li><a href="https://alpha.wallhaven.cc">Wallhaven</a></li>
-				<li><a href="https://myfigurecollection.net/">Figure Colle</a></li>
-				<li><a href="https://boards.4chan.org/w/catalog">/w/</a></li>
-				<li><a href="https://www.pixiv.net/">Pixiv</a></li>
-			</ul>
-		</div>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					MISC
-				</div>
-				<li><a href="http://game.granbluefantasy.jp">GBF</a></li>
-				<li><a href="https://forum.xda-developers.com/oneplus-6t">1+6T XDA</a></li>
-				<li><a href="https://www.amazon.es/">Amazon.es</a></li>
-				<li><a href="https://es.aliexpress.com/es_home.htm">Aliexpress</a></li>
-				<li><a href="https://www.amiami.com/eng/">AmiAmi</a></li>
-				<li><a href="https://goodsmileshop.com/en/">GoodSmileShop</a></li>
-			</ul>
-		</div>
-		<div id=linkblock>
-			<ul>
-				<div id=blocktitle>
-					ESTUDIO
-				</div>
-				<li><a href="https://moodle.upm.es/titulaciones/oficiales/my/">UPM</a></li>
-				<li><a href="https://www.wuolah.com/">Wuolah</a></li>
-				<li><a href="https://www.wolframalpha.com/">Wolfram Alpha</a></li>
-				<li><a href="https://www.upm.es/webmail_alumnos/?_task=mail">Webmail</a></li>
-				<li><a href="https://www.hpcalc.org/">HP Calc</a></li>
-			</ul>
-		</div>
-	</div>
+	</div> <!-- Ending frame_image-->
 
-	<div id=frame_alt>
-		<iframe width="400" height="200" style="margin-top: 10px; border-radius: 10px;" src="https://www.youtube.com/embed/taCRBFkUqdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<div id=linkblock style="margin-left: 30px; width: 130px">
-			<ul>
-				<div id=blocktitle>
-					MUSICA
-				</div>
-				<li><a href="https://open.spotify.com/browse/featured">Spotify</a></li>
-				<li><a href="https://soundcloud.com/discover">Soundcloud</a></li>
-				<li><a href="https://www.sittingonclouds.net/">Sitting on Clouds</a></li>
-				<li><a href="http://dojin.co/">Dojin</a></li>
-			</ul>
-		</div>
-	</div>
 
-</div>
+	<div id=frame0>
+
+		<div id="Title">search the web</div>
+
+		<input id="searchbox" placeholder="type something..." type="text" autofocus="true"  autocomplete="true"></input>
+
+		<div class="frame1 frame1a">
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						UTILIDADES
+					</div>
+					<li><a href="https://mega.nz/fm/IYhSFY7D">MEGA</a></li>
+					<li><a href="https://github.com/">GitHub</a></li>
+					<li><a href="https://photos.google.com/?hl=es">GFotos</a></li>
+					<li><a href="https://www.google.com/maps">GMaps</a></li>
+					<li><a href="https://calendar.google.com/calendar/r">GCalendar</a></li>
+				</ul>
+			</div>
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						SOCIAL
+					</div>
+					<li><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></li>
+					<li><a href="https://web.whatsapp.com/">Whatsapp</a></li>
+					<li><a href="https://web.telegram.org/#/im">Telegram</a></li>
+					<li><a href="https://twitter.com/?lang=es">Twitter</a></li>
+					<li><a href="https://www.reddit.com/">Reddit</a></li>
+					<li><a href="https://www.twitch.tv/">Twitch</a></li>	
+				</ul>
+			</div>
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						PIRATING
+					</div>
+					<li><a href="https://blackpearl.biz/">Blackpearl</a></li>
+					<li><a href="https://unblocked-pw.github.io/">Unblocked</a></li>
+					<li><a href="http://fitgirl-repacks.site/">FitGirl</a></li>
+					<li><a href="https://nyaa.si/">Nyaa</a></li>
+					<li><a href="https://www.subanima.net/viewforum.php?f=30">SubAnima</a></li>
+					<li><a href="https://forum.mobilism.org/viewforum.php?f=398">Mobilism</a></li>
+				</ul>
+			</div>
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						ARTWORK
+					</div>
+					<li><a href="https://unsplash.com/">Unsplash</a></li>
+					<li><a href="https://alpha.wallhaven.cc">Wallhaven</a></li>
+					<li><a href="https://myfigurecollection.net/">Figure Colle</a></li>
+					<li><a href="https://boards.4chan.org/w/catalog">/w/</a></li>
+					<li><a href="https://www.pixiv.net/">Pixiv</a></li>
+				</ul>
+			</div>
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						MISC
+					</div>
+					<li><a href="http://game.granbluefantasy.jp">GBF</a></li>
+					<li><a href="https://forum.xda-developers.com/oneplus-6t">1+6T XDA</a></li>
+					<li><a href="https://www.amazon.es/">Amazon.es</a></li>
+					<li><a href="https://es.aliexpress.com/es_home.htm">Aliexpress</a></li>
+					<li><a href="https://www.amiami.com/eng/">AmiAmi</a></li>
+					<li><a href="https://goodsmileshop.com/en/">GoodSmileShop</a></li>
+				</ul>
+			</div>
+			<div class=linkblock>
+				<ul>
+					<div class=blocktitle>
+						ESTUDIO
+					</div>
+					<li><a href="https://moodle.upm.es/titulaciones/oficiales/my/">UPM</a></li>
+					<li><a href="https://www.wuolah.com/">Wuolah</a></li>
+					<li><a href="https://www.wolframalpha.com/">Wolfram Alpha</a></li>
+					<li><a href="https://www.upm.es/webmail_alumnos/?_task=mail">Webmail</a></li>
+					<li><a href="https://www.hpcalc.org/">HP Calc</a></li>
+				</ul>
+			</div>
+		</div> <!-- End frame1a -->
+
+
+		<div class="frame1 frame1b">
+			<iframe width="400" height="200" style="margin-top: 10px; border-radius: 10px;" src="https://www.youtube.com/embed/taCRBFkUqdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class=linkblock style="margin-left: 30px; width: 130px">
+				<ul>
+					<div class=blocktitle>
+						MUSICA
+					</div>
+					<li><a href="https://open.spotify.com/browse/featured">Spotify</a></li>
+					<li><a href="https://soundcloud.com/discover">Soundcloud</a></li>
+					<li><a href="https://www.sittingonclouds.net/">Sitting on Clouds</a></li>
+					<li><a href="http://dojin.co/">Dojin</a></li>
+				</ul>
+			</div>
+		</div> <!-- End frame1b -->
+
+	</div> <!-- End frame0 -->
+
+</div> <!-- End frame -->
 
 </body>
 <script src="search.js" type="text/javascript"></script>
