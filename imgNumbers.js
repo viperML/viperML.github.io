@@ -1,3 +1,3 @@
 // File genereated by SOURCE\convet.ps1
-var numberSFW = 3
-var numberNSFW = 2
+var numberSFW = 16
+var numberNSFW = 20
