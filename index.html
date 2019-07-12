@@ -12,15 +12,23 @@
 <body>
 <div id=frame>
 
-	<!-- Random picture chooser -->
+	<!-- Random picture chooser to image_frame -->
 	<script>
-		var pictures = [
-			'1gYB72S.webp'
-		];
+		if ( localStorage.getItem('SFW') == '1' ) {
+			var pictures = [
+				'SFW/1gYB72S.webp'
+			];
+		} else {
+			var pictures = [
+				'NSFW/03ee74b371358012f7981f334bc7b9e3.jpg'
+			];
+		};
+
 		var picture = pictures[Math.floor(Math.random() * pictures.length)];
 
 	// frame_image written to html
 	document.write('<div id=frame_image style="background-image: url(img/' + picture + ')">');
+
 	</script>
 		<!-- Buttons to change between frame1a and frame1b -->
 		<div id="B1" class=button></div>
