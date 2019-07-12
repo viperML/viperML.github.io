@@ -35,11 +35,13 @@ body {
 #frame_image {
 	width: 250px;
 	height: 295px;
+	border-radius: 15px;
+
 	float: left;
 	position: relative;
 
 	background-size: cover;
-	border-radius: 15px;
+	background-position: center top;
 }
 
 .frame1 {
@@ -116,7 +118,7 @@ li {
 
 
 .button {
-	opacity: 0.2;
+	opacity: 0.4;
 	width: 15px;
 	height: 15px;
 	background-color: var(--white1);
