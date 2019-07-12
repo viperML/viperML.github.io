@@ -10,8 +10,8 @@
 
 body {
 	background-color: var(--background);
-	background-image: url("img/background.webp");
-	background-size: cover;
+	background-image: url("img/background.png");
+	background-size: contain;
 }
 
 #frame {
