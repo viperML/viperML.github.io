@@ -14,13 +14,13 @@
 
 	<!-- Random picture chooser to image_frame -->
 	<script>
-		if ( localStorage.getItem('SFW') == '1' ) {
+		if ( localStorage.getItem('SFW') == '0' ) {
 			var pictures = [
-				'SFW/1gYB72S.webp'
+				'NSFW/03ee74b371358012f7981f334bc7b9e3.jpg'
 			];
 		} else {
 			var pictures = [
-				'NSFW/03ee74b371358012f7981f334bc7b9e3.jpg'
+				'SFW/1gYB72S.webp'
 			];
 		};
 
@@ -145,10 +145,10 @@
 <!-- Button A to change between SFW/NSFW images -->
 <div id=BA>
 	<script>
-		if ( localStorage.getItem('SFW') == '1' ) {
-			document.write('SFW');
-		} else {
+		if ( localStorage.getItem('SFW') == '0' ) {
 			document.write('NSFW');
+		} else {
+			document.write('SFW');
 		}
 	</script>
 </div> <!-- End BA -->
