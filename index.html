@@ -10,31 +10,25 @@
 </head>
 
 <body>
+
+<script src="imgNumbers.js" type="text/javascript"></script>
+
 <div id=frame>
 
-	<!-- Random picture chooser to image_frame -->
+	<!-- Random picture chooser, written to the html -->
 	<script>
 		if ( localStorage.getItem('SFW') == '0' ) {
-			var pictures = [
-				'NSFW/03ee74b371358012f7981f334bc7b9e3.jpg'
-			];
+			document.write('<div id=frame_image style="background-image: url(img/NSFW/' + Math.floor(Math.random() * numberNSFW) + '.webp)">');
 		} else {
-			var pictures = [
-				'SFW/1gYB72S.webp'
-			];
+			document.write('<div id=frame_image style="background-image: url(img/SFW/' + Math.floor(Math.random() * numberSFW) + '.webp)">');
 		};
-
-		var picture = pictures[Math.floor(Math.random() * pictures.length)];
-
-	// frame_image written to html
-	document.write('<div id=frame_image style="background-image: url(img/' + picture + ')">');
-
 	</script>
-		<!-- Buttons to change between frame1a and frame1b -->
-		<div id="B1" class=button></div>
-		<div id="B2" class=button></div>
 
-	</div> <!-- End frame_image-->
+		<!-- Buttons to change between frame1a and frame1b -->
+				<div id="B1" class=button></div>
+				<div id="B2" class=button></div>
+
+			</div> <!-- End frame_image-->
 
 
 	<div id=frame0>
