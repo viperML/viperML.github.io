@@ -4,21 +4,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>home</title>
 	
-	<script type="text/javascript">
-		function show( show1 ) {
-		  document.getElementsByClassName(show1)[0].style.display="block";
-		}
-		function hide( hide1 ) {
-		  document.getElementsByClassName(hide1)[0].style.display="none";
-		}
-		function togON( tog ) {
-		  document.getElementById(tog).style.backgroundColor="var(--gray1)";
-		}
-		function togOFF( tog ) {
-		  document.getElementById(tog).style.backgroundColor="var(--white1)";
-		}
-	</script>
-
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-96x96.png">
@@ -38,8 +23,8 @@
 	document.write('<div id=frame_image style="background-image: url(img/' + picture + ')">');
 	</script>
 		<!-- Buttons to change between frame1a and frame1b -->
-		<div id="B1" class=button onclick="show('frame1a'); hide('frame1b'); togON('B1'); togOFF('B2');"></div>
-		<div id="B2" class=button onclick="hide('frame1a'); show('frame1b'); togON('B2'); togOFF('B1');"></div>
+		<div id="B1" class=button></div>
+		<div id="B2" class=button></div>
 
 	</div> <!-- Ending frame_image-->
 
@@ -162,4 +147,5 @@
 </body>
 <script src="search.js" type="text/javascript"></script>
 <script src="localStorage.js" type="text/javascript"></script>
+<script src="frameButtons.js" type="text/javascript"></script>
 </html>

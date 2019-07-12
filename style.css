@@ -121,11 +121,11 @@ li {
 	height: 15px;
 	background-color: var(--white1);
 	border-radius: 3px;
+	cursor: pointer;
 }
 
 .button:hover {
 	background-color: var(--gray3) !important;
-	cursor: pointer;
 	transition: 200ms;
 }
 
@@ -144,10 +144,20 @@ li {
 }
 
 #BA {
-	width: 200px;
-	height: 200px;
-	background-color: red;
-	color: white;
+	display: inline-block;
+	position: absolute;
+	bottom: 25px;
+	left: 40px;
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: var(--white1);
+	user-select: none;
+	cursor: pointer;
+}
+
+#BA:hover{
+	color: var(--gray1);
 }
 	
 a:link    { text-decoration:none; font-weight:normal; color:var(--white1); }
