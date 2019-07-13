@@ -18,10 +18,10 @@ window.addEventListener('load',function(){
 
 function setSFW( buttonID ) {
     localStorage.setItem('SFW', '1');
-    document.getElementById( buttonID ).textContent = 'SFW';
+    window.location.reload();
 }
 
 function setNSFW( buttonID ) {
     localStorage.setItem('SFW', '0');
-    document.getElementById( buttonID ).textContent = 'NSFW';
+    window.location.reload();
 }
