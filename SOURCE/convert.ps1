@@ -4,7 +4,7 @@ Push-Location $dir
 $Source = Get-ChildItem "SFW\*.jpeg" , "SFW\*.jpg" , "SFW\*.png"
 $numberSFW = [int]"0"
 ForEach ($file in $Source) {
-    cwebp $file -o $("SFW\" + [string]$numberSFW + ".webp") -m 6 -mt
+    cwebp $file -o $("SFW\" + [string]$numberSFW + ".webp") -m 6 -mt -resize 0 600
     $numberSFW = $numberSFW + 1
 }
 
@@ -12,7 +12,7 @@ ForEach ($file in $Source) {
 $Source = Get-ChildItem "NSFW\*.jpeg" , "NSFW\*.jpg" , "NSFW\*.png"
 $numberNSFW = [int]"0"
 ForEach ($file in $Source) {
-    cwebp $file -o $("NSFW\" + [string]$numberNSFW + ".webp") -m 6 -mt
+    cwebp $file -o $("NSFW\" + [string]$numberNSFW + ".webp") -m 6 -mt -resize 0 600
     $numberNSFW = $numberNSFW + 1
 }
 
