@@ -16,7 +16,7 @@ function search(query){
     switch(query.substr(0, 2)){
             
         default:
-            window.location="https://duckduckgo.com/?q=" +
+            window.location="https://www.google.com/search?q=" +
                 query.replaceChars(" ", "+");
     }
 }
