@@ -1,7 +1,8 @@
 # [viperML.github.io](https://viperml.github.io)
 
 Startpage with bookmarks.
-Project dedicated to learning simple HTML + CSS.
+
+Project dedicated to learning simple HTML, CSS & JS.
 
 ![](SOURCE/preview.png?raw=true)
 
