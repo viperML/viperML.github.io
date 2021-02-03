@@ -1,31 +1,31 @@
 $dir = Split-Path $MyInvocation.MyCommand.Path
 Push-Location $dir
 
-$Source = Get-ChildItem "SFW\*.jpeg" , "SFW\*.jpg" , "SFW\*.png"
-$numberSFW = [int]"0"
+$Source = Get-ChildItem "Main\*.jpeg" , "Main\*.jpg" , "Main\*.png"
+$numberMain = [int]"0"
 ForEach ($file in $Source) {
-    cwebp $file -o $("SFW\" + [string]$numberSFW + ".webp") -m 6 -mt -resize 0 600
-    $numberSFW = $numberSFW + 1
+    cwebp $file -o $("Main\" + [string]$numberMain + ".webp") -m 6 -mt -resize 0 600
+    $numberMain = $numberMain + 1
 }
 
 
-$Source = Get-ChildItem "NSFW\*.jpeg" , "NSFW\*.jpg" , "NSFW\*.png"
-$numberNSFW = [int]"0"
+$Source = Get-ChildItem "Alt\*.jpeg" , "Alt\*.jpg" , "Alt\*.png"
+$numberAlt = [int]"0"
 ForEach ($file in $Source) {
-    cwebp $file -o $("NSFW\" + [string]$numberNSFW + ".webp") -m 6 -mt -resize 0 600
-    $numberNSFW = $numberNSFW + 1
+    cwebp $file -o $("Alt\" + [string]$numberAlt + ".webp") -m 6 -mt -resize 0 600
+    $numberAlt = $numberAlt + 1
 }
 
 $prompt = Read-Host "¿Mover a img ? [y/N]"
 if( $prompt -like "y" ) {
-    Remove-Item "..\img\SFW\*.webp"
-    Remove-Item "..\img\NSFW\*.webp"
-    Move-Item "SFW\*.webp"  -Destination "..\img\SFW"
-    Move-Item "NSFW\*.webp"  -Destination "..\img\NSFW"
+    Remove-Item "..\img\Main\*.webp"
+    Remove-Item "..\img\Alt\*.webp"
+    Move-Item "Main\*.webp"  -Destination "..\img\Main"
+    Move-Item "Alt\*.webp"  -Destination "..\img\Alt"
 
     Set-Content -Path "..\imgNumbers.js" -Value "// File genereated by SOURCE\convet.ps1"
-    Add-Content -Path "..\imgNumbers.js" -Value $("var numberSFW = " + [string]$numberSFW)
-    Add-Content -Path "..\imgNumbers.js" -Value $("var numberNSFW = " + [string]$numberNSFW)
+    Add-Content -Path "..\imgNumbers.js" -Value $("var numberMain = " + [string]$numberMain)
+    Add-Content -Path "..\imgNumbers.js" -Value $("var numberAlt = " + [string]$numberAlt)
 }
 
 Pop-Location

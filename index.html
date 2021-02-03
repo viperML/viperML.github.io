@@ -17,10 +17,10 @@
 
 	<!-- Random picture chooser, written to the html -->
 	<script>
-		if ( localStorage.getItem('SFW') == '0' ) {
-			document.write('<div id=frame_image style="background-image: url(img/NSFW/' + Math.floor(Math.random() * numberNSFW) + '.webp)">');
+		if ( localStorage.getItem('Main') == '0' ) {
+			document.write('<div id=frame_image style="background-image: url(img/Alt/' + Math.floor(Math.random() * numberAlt) + '.webp)">');
 		} else {
-			document.write('<div id=frame_image style="background-image: url(img/SFW/' + Math.floor(Math.random() * numberSFW) + '.webp)">');
+			document.write('<div id=frame_image style="background-image: url(img/Main/' + Math.floor(Math.random() * numberMain) + '.webp)">');
 		};
 	</script>
 
@@ -140,13 +140,13 @@
 </div> <!-- End frame -->
 
 
-<!-- Button A to change between SFW/NSFW images -->
+<!-- Button A to change between Main/Alt images -->
 <div id=BA>
 	<script>
-		if ( localStorage.getItem('SFW') == '0' ) {
-			document.write('NSFW');
+		if ( localStorage.getItem('Main') == '0' ) {
+			document.write('Alt');
 		} else {
-			document.write('SFW');
+			document.write('Main');
 		}
 	</script>
 </div> <!-- End BA -->

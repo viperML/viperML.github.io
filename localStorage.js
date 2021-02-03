@@ -1,27 +1,27 @@
 window.addEventListener('load',function(){
 
-    if ( localStorage.getItem('SFW') == null ) {
-        setSFW('BA')
+    if ( localStorage.getItem('Main') == null ) {
+        setMain('BA')
     }
 
     var botonA = document.querySelector("#BA");
 
     botonA.addEventListener( 'click', function(){
-        if ( localStorage.getItem('SFW') == '1' ){
-            setNSFW('BA')
+        if ( localStorage.getItem('Main') == '1' ){
+            setAlt('BA')
         } else {
-            setSFW('BA')
+            setMain('BA')
         }
     });
 
 });
 
-function setSFW( buttonID ) {
-    localStorage.setItem('SFW', '1');
+function setMain( buttonID ) {
+    localStorage.setItem('Main', '1');
     window.location.reload();
 }
 
-function setNSFW( buttonID ) {
-    localStorage.setItem('SFW', '0');
+function setAlt( buttonID ) {
+    localStorage.setItem('Main', '0');
     window.location.reload();
 }
